@@ -1,0 +1,16 @@
+@use '../util' as m;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:hsl(0, 37%, 48%);
+}
+
+h1{
+    color: m.$h1Color;
+    /* font-size:clamp(rems(28),rems(10) + 2vw,rems(40)) ; */
+}

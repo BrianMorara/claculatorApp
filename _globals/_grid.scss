@@ -1,0 +1,90 @@
+@use '../util';
+
+.main{
+    background-color:util.$bgColor;
+    width: 100vw;
+    height: 100vh;
+
+    .btn{
+        background-color: util.$numBtnColor;
+        border: 1px solid util.$numBtnColor;
+        border-radius: 50%;
+        font-size: 2.1em;
+        font-weight: 545;
+        color: util.$fontColor;
+        box-shadow:1px 1px 10px  util.$numBtnColor;
+
+    }
+    
+    .sign{
+        background-color:util.$signColor;
+        box-shadow: 1px 1px 1px util.$signColor;
+    }
+
+    .equal{
+        background-color: util.$equalBtnColor;
+        border-radius: 50%;
+        font-size: 2.1em;
+        box-shadow:1px 1px 10px util.$equalBtnColor;
+    }
+
+    .clear{
+        background-color: util.$clearBtnColor;
+        border-radius: 50%;
+        font-size: 2.1em;
+        box-shadow:1px 1px 10px util.$clearBtnColor;;
+    }
+
+    .delete{
+        background-color: util.$deleteBtnColor;
+        border-radius: 50%;
+        font-size: 2.1em;
+        box-shadow:1px 1px 10px util.$deleteBtnColor;
+    }
+
+    @include util.breakpoint(medium){
+          margin-top: 1.6em;
+          margin-inline: 16.25em; 
+          border-radius: 1.3rem; 
+          width: 30.9em;
+          height: 96vh;
+    }
+
+
+   #input{
+       width: 100vw;
+       height: 20vh;
+       text-align: right;
+       font-size: 2.4em;
+       color: util.$inputColor;
+       background-color: util.$bgColor;
+       border-color: util.$bgColor;
+       border-bottom-color: hsl(207, 14%, 25%);
+       pointer-events: none;
+
+       @include util.breakpoint(medium){
+           width: 11.72em;
+           height: 4.3em;
+           margin-inline: 0.625em;
+           margin-top: 0.25em;
+           margin-bottom: 0.1875em;
+           border-radius: 1.3em;
+       }
+    }
+
+    .buttons{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        gap: 3em;
+        margin-top: 4em;
+        margin-inline: 0.8em;
+
+        @include util.breakpoint(medium){
+            width: 27.8em;
+
+            margin-top: 2em;
+        }
+    }
+
+}
